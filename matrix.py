@@ -12,12 +12,45 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    pass
+    result = ""
+    for col in matrix:
+        result += str(col[0]) + " "
+    result += "\n"
+    for col in matrix:
+        result += str(col[1]) + " "
+    result += "\n"
+    for col in matrix:
+        result += str(col[2]) + " "
+    result += "\n"
+    for col in matrix:
+        result += str(col[3]) + " "
+    print(result)
+
+# #Test for print_matrix
+# print_matrix([[55,200,150,1],
+#               [100, 255, 33, 1],
+#               [50, 130, 234, 1]])
+# should return:
+# 55 100 50
+# 200 255 130
+# 150 33 234
+# 1 1 1
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    for i in range(0, len(matrix)):
+        for i2 in range(0, len(matrix)):
+            matrix[i][i2] = 0
+        matrix[i][i] = 1
+
+#Test for ident
+a = [[255, 30, 123, 1],
+     [132, 24, 32, 1],
+     [54, 23, 243, 1]]
+print_matrix(a)
+ident(a)
+print_matrix(a)
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
