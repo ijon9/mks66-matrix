@@ -57,19 +57,21 @@ def matrix_mult( m1, m2 ):
                 entryElement += m1[currPos][eachRowInM1] * m2[eachColInM2][currPos]
             matrixEntry.append(entryElement) #Builds the matrixEntry, appends each number calculated into a list
         finalMatrix.append(matrixEntry) #Builds the entire matrix, appends each list created into the outer list, forming the matrix
-    m2 = finalMatrix #Modifies m2 to be the product
+    m2.clear()
+    m2.extend(finalMatrix) #Modifies m2 to the new product
 
-#Test for matrix_mult
-matrix1 = [[1,4],
-           [2,5],
-           [3,6]]
+# #Test for matrix_mult
+# matrix1 = [[1,4],
+#            [2,5],
+#            [3,6]]
+#
+# matrix2 = [[10,30,50],
+#            [20,40,60]]
+#
+# print_matrix(matrix2)
+# matrix_mult(matrix1, matrix2)
+# print_matrix(matrix2)
 
-matrix2 = [[10,30,50],
-           [20,40,60]]
-
-print_matrix(matrix2)
-matrix_mult(matrix1, matrix2)
-print_matrix(matrix2)
 
 
 def new_matrix(rows = 4, cols = 4):
