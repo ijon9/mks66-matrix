@@ -73,7 +73,6 @@ def matrix_mult( m1, m2 ):
 # print_matrix(matrix2)
 
 
-
 def new_matrix(rows = 4, cols = 4):
     m = []
     for c in range( cols ):
